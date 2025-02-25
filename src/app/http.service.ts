@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class HttpService {
 
-  private apiUrl = 'https://api.example.com'; // Replace with your API URL
+  private apiUrl = 'https://hq56d6ir59.execute-api.us-east-1.amazonaws.com/dev'; 
 
   constructor(private http: HttpClient) { }
 
