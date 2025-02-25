@@ -1,0 +1,19 @@
+version: 1
+applications:
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            - nvm install 18.19.0  # Force the correct Node.js version
+            - nvm use 18.19.0
+            - npm ci
+        build:
+          commands:
+            - npm run build -- --configuration=production
+      artifacts:
+        baseDirectory: dist/your-angular-app
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
