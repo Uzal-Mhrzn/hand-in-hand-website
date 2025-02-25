@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <img src="assets/img/logo.png" alt="Logo" class="logo">
+  <span>{{ title }}</span>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" opened>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </a>
+      <a mat-list-item routerLink="/about">
+        <mat-icon>info</mat-icon>
+        <span>About</span>
+      </a>
+      <a mat-list-item routerLink="/notice">
+        <mat-icon>announcement</mat-icon>
+        <span>Notice</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <p>Contact us: contact&#64;xyzcorp.com</p>
+        <p>Address: 1234 Street Name, City, Country</p>
+      </div>
+    </footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

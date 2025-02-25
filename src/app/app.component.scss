@@ -1,0 +1,77 @@
+.example-container {
+    height: 100%;
+  }
+  
+  mat-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2; /* Ensure the toolbar is above other content */
+    background-color: black; /* Black background for toolbar */
+    color: white; 
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px; /* Adjust the height as needed */
+    margin-right: 16px; /* Space between the logo and the title */
+  }
+
+  mat-sidenav-container {
+    padding-top: 56px; /* Adjust based on your toolbar height */
+    height: 100vh; /* Ensure the container takes full height */
+  }
+
+  mat-sidenav {
+    width: 250px; /* Adjust the width of the sidenav */
+    padding-top: 56px;
+    background-color: black; /* Black background for sidenav */
+    color: white; 
+    border-bottom-left-radius: 0; /* Remove bottom left border radius */
+    border-bottom-right-radius: 0; 
+  }
+
+  ::ng-deep {
+    .mdc-list-item__content{
+        .mdc-list-item__primary-text{
+            color: white  !important;
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Space between icon and text */
+        }
+  }
+}
+  
+  mat-sidenav-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logout{
+    ::ng-deep{
+        span{
+            color: white;
+        }
+    }
+  }
+
+  .content {
+    flex: 1;
+    padding: 16px; /* Add padding to the content */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  footer.footer {
+    background-color: #3f51b5; /* Primary color background */
+    color: white; /* White text for contrast */
+    padding: 16px;
+    text-align: center;
+    flex-shrink: 0; /* Prevent the footer from shrinking */
+  }
+  
+  .footer-content {
+    margin: 0 auto;
+  }
