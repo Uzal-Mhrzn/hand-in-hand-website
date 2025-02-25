@@ -11,7 +11,7 @@ applications:
           commands:
             - npm run build -- --configuration=production
       artifacts:
-        baseDirectory: dist
+        baseDirectory: dist/ngo
         files:
           - '**/*'
       cache:
