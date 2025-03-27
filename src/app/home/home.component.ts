@@ -14,10 +14,7 @@ export class HomeComponent  implements OnInit {
     { title: 'News 3', description: 'This is a short description for news 3.' }
   ];
 
-  upcomingEvents = [
-    { title: 'Event 1', description: 'This is a short description for event 1.' },
-    { title: 'Event 2', description: 'This is a short description for event 2.' },
-    { title: 'Event 3', description: 'This is a short description for event 3.' }
+  upcomingEvents:any = [
   ];
 
   slides = [
@@ -45,10 +42,13 @@ export class HomeComponent  implements OnInit {
 
   constructor(private dataService: HttpService) { }
 
-  ngOnInit(): void {
-    this.dataService.getRecentNews().subscribe(news => {
-      this.recentNews = news;
+  getEventImages(event:any){
+    this.dataService.getUpcomingEventImages(event.id).subscribe(images => {
+      event.images = images;
     });
+  }
+
+  ngOnInit(): void {
 
     this.dataService.getUpcomingEvents().subscribe(events => {
       this.upcomingEvents = events;

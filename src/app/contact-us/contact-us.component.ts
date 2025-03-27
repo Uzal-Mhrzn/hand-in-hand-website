@@ -3,12 +3,12 @@ import { HttpService } from '../http.service';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
+  selector: 'contact-us',
+  templateUrl: './contact-us.component.html',
   standalone:false,
-  styleUrl: './about.component.scss'
+  styleUrl: './contact-us.component.scss'
 })
-export class AboutComponent implements OnInit {
+export class ContactComponent implements OnInit {
   constructor(private dataService: HttpService) {}
   aboutUs:any = {}
   formGroup:FormGroup = new FormGroup({

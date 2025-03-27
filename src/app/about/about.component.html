@@ -1,26 +1,13 @@
 <div class="about-container">
     <h1>About Our Company</h1>
     <p>
-      Our company, XYZ Corp, is a leading provider of innovative solutions in the tech industry. We are committed to delivering high-quality products and services to our customers worldwide.
+      {{aboutUs?.vision}}
     </p>
     <h2>Our Mission</h2>
-    <p>
-      Our mission is to drive technological advancements and create value for our stakeholders through continuous innovation and excellence.
-    </p>
-    <h2>Our Team</h2>
-    <div class="team-member">
-      <h3>John Doe</h3>
-      <p>CEO</p>
-      <p>John is the visionary leader of XYZ Corp, with over 20 years of experience in the tech industry.</p>
-    </div>
-    <div class="team-member">
-      <h3>Jane Smith</h3>
-      <p>CTO</p>
-      <p>Jane is the technical genius behind our innovative products, leading our R&D team with passion and expertise.</p>
-    </div>
-    <div class="team-member">
-      <h3>Emily Johnson</h3>
-      <p>COO</p>
-      <p>Emily ensures our operations run smoothly, overseeing all aspects of our business processes.</p>
-    </div>
+    <p>{{aboutUs?.mission}}</p>
+    <h2>Additional Information</h2>
+    <p>{{aboutUs?.info}}</p>
+    <h2>Founder</h2>
+    <p>{{aboutUs?.foundedBy}}</p>
+    <p>{{aboutUs?.foundedOn | date: "MM yyyy"}}</p>
   </div>
