@@ -10,7 +10,7 @@ import { HttpService } from './http.service';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Welcome to YPDSN !!!';
+  title = '';
   footer:any = {};
   menuItems = [{
     name:'Home',
@@ -21,11 +21,7 @@ export class AppComponent {
     icon:'info',
     url:'/about'
   },{
-    name:'Notice',
-    icon:'announcement',
-    url:'/notice'
-  },{
-    name:'Partners',
+    name:'Officers',
     icon:'handshake',
     url:'/partners'
   },{
