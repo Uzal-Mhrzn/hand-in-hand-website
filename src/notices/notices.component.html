@@ -1,0 +1,11 @@
+<div class="notices-container">
+    <mat-card class="notice-card" *ngFor="let notice of notices" (click)="openDialog(notice)">
+      <mat-card-header>
+        <mat-card-title>{{ notice.title }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="notice.image" alt="{{ notice.title }}">
+      <mat-card-content>
+        <p>{{ notice.description }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
